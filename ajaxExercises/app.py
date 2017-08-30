@@ -14,7 +14,7 @@ def index():
 	number = randint(1,100)
 	return render_template('index.html', number=number)
 
-@app.route('/rando')
+@app.route('/rando', methods=['POST'])
 def rando(): 
 	number = randint(1,100)
 	return jsonify({"no":randint(1,100)})
